@@ -50,7 +50,7 @@
     "screenshotsHeading": "Screenshots",
     "screenshotPlaceholder": "Screenshot",
     "trustHeading": "Private by design",
-    "trustDesc": "Runs entirely on your device with no account and no analytics. The check log stays local. To show your exit IP's location, NetPulse queries the public IP lookup service ip9.com.cn — see the Privacy Policy for details.",
+    "trustDesc": "Runs entirely on your device with no account and no analytics. The check log stays local. To show your exit IP's location, NetPulse queries a public IP lookup service — ip.im (English) or ip9.com.cn (Chinese) — see the Privacy Policy for details.",
     "ctaTitle": "Keep an eye on your connection",
     "ctaDesc": "Download the latest NetPulse APK and start monitoring in one tap."
   },
@@ -63,7 +63,7 @@
     "s2Title": "Network requests NetPulse makes",
     "s2Intro": "NetPulse makes only two kinds of outbound requests, both essential to its function:",
     "s2a": "Connectivity probes — it requests lightweight generate_204 endpoints to test whether the open internet is reachable. These carry no personal data beyond what any normal web request includes (your IP, as seen by the endpoint).",
-    "s2b": "Exit-IP lookup — to display your current public exit IP, its region and ISP, NetPulse queries the third-party service ip9.com.cn (https://ip9.com.cn/get). As with any IP-geolocation lookup, that service necessarily sees the public IP address the request originates from. NetPulse sends no other data to it. ip9.com.cn is operated independently; see https://www.ip9.com.cn/ for its own terms.",
+    "s2b": "Exit-IP lookup — to display your current public exit IP, its region and ISP, NetPulse queries a third-party IP-geolocation service. Which one depends on the app's language: ip.im when the app is in English, or ip9.com.cn (https://ip9.com.cn/get) when it is in Chinese. As with any IP-geolocation lookup, the chosen service necessarily sees the public IP address the request originates from. NetPulse sends no other data to it. Both services are operated independently; see ip.im and https://www.ip9.com.cn/ for their own terms.",
     "s3Title": "Permissions",
     "s3Body": "NetPulse requests only the permissions it needs: Internet (to run the checks), Foreground Service + Notifications (to keep monitoring and show the status icon), Receive Boot Completed (to auto-restart monitoring after a reboot, if it was active), and Vibrate (for optional disconnect alerts). It is not a VPN and requests no VPN, location, contacts, or storage permissions.",
     "s4Title": "Data sharing & retention",

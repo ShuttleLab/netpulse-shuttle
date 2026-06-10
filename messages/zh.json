@@ -50,7 +50,7 @@
     "screenshotsHeading": "应用截图",
     "screenshotPlaceholder": "截图",
     "trustHeading": "隐私优先设计",
-    "trustDesc": "完全在你的设备上运行，无账户、无统计追踪，检查日志只存本地。为显示出口 IP 的归属地，NetPulse 会调用公开的 IP 查询服务 ip9.com.cn——详见隐私政策。",
+    "trustDesc": "完全在你的设备上运行，无账户、无统计追踪，检查日志只存本地。为显示出口 IP 的归属地，NetPulse 会调用公开的 IP 查询服务——英文用 ip.im，中文用 ip9.com.cn——详见隐私政策。",
     "ctaTitle": "随时掌握你的连接状态",
     "ctaDesc": "下载最新版 NetPulse APK，一键开始监控。"
   },
@@ -63,7 +63,7 @@
     "s2Title": "NetPulse 发起的网络请求",
     "s2Intro": "NetPulse 只发起两类对外请求，且都是其核心功能所必需：",
     "s2a": "连通性探测——请求轻量级 generate_204 端点以检测互联网是否可达。除了任何普通网络请求都会包含的信息（端点能看到你的 IP）之外，不携带任何个人数据。",
-    "s2b": "出口 IP 查询——为显示你当前的公网出口 IP、地区和运营商，NetPulse 会请求第三方服务 ip9.com.cn（https://ip9.com.cn/get）。与任何 IP 归属地查询一样，该服务必然能看到请求来源的公网 IP 地址。NetPulse 不会向它发送其他任何数据。ip9.com.cn 由第三方独立运营，其条款见 https://www.ip9.com.cn/。",
+    "s2b": "出口 IP 查询——为显示你当前的公网出口 IP、地区和运营商，NetPulse 会请求第三方 IP 归属地服务。具体用哪个取决于应用语言：英文时使用 ip.im，中文时使用 ip9.com.cn（https://ip9.com.cn/get）。与任何 IP 归属地查询一样，所选服务必然能看到请求来源的公网 IP 地址。NetPulse 不会向它发送其他任何数据。这两个服务均由第三方独立运营，其条款见各自官网（ip.im 与 https://www.ip9.com.cn/）。",
     "s3Title": "权限",
     "s3Body": "NetPulse 只申请必需的权限：网络（执行检查）、前台服务 + 通知（保持监控并显示状态图标）、接收开机广播（监控开启时重启后自动恢复）、震动（可选的断线提醒）。它不是 VPN，不申请 VPN、定位、通讯录或存储权限。",
     "s4Title": "数据共享与留存",
