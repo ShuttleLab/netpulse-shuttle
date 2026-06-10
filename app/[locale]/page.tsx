@@ -90,7 +90,7 @@ export default async function HomePage({ params }: Props) {
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
               <span className="text-primary">NetPulse</span>
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">{t("subtitle")}</p>
+            <p className="mt-4 text-lg sm:text-xl text-muted-foreground leading-relaxed">{t("subtitle")}</p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer"
                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-sm transition hover:opacity-90">
@@ -120,7 +120,7 @@ export default async function HomePage({ params }: Props) {
           <ShieldCheck className="mt-0.5 size-6 shrink-0 text-primary" />
           <div>
             <h2 className="font-semibold">{t("notVpnTitle")}</h2>
-            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{t("notVpnDesc")}</p>
+            <p className="mt-1 text-[15px] text-muted-foreground leading-relaxed">{t("notVpnDesc")}</p>
           </div>
         </div>
       </section>
@@ -135,8 +135,8 @@ export default async function HomePage({ params }: Props) {
                 <div className="mb-3 flex size-10 items-center justify-center rounded-lg bg-primary/10">
                   <f.Icon className="size-5 text-primary" />
                 </div>
-                <h3 className="font-semibold">{f.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                <h3 className="text-lg font-semibold">{f.title}</h3>
+                <p className="mt-1 text-[15px] text-muted-foreground leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -166,7 +166,7 @@ export default async function HomePage({ params }: Props) {
                   {s.n}
                 </div>
                 <h3 className="mt-3 font-semibold">{s.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <p className="mt-1 text-[15px] text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -177,7 +177,7 @@ export default async function HomePage({ params }: Props) {
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
           <h2 className="text-xl font-bold">{t("trustHeading")}</h2>
-          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{t("trustDesc")}</p>
+          <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("trustDesc")}</p>
         </div>
       </section>
 
