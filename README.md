@@ -1,6 +1,20 @@
-# NetPulse — Website
+<div align="center">
+  <h1>NetPulse — Website</h1>
+  <p>
+    <strong>Marketing &amp; download landing page for NetPulse</strong><br/>
+    a lightweight connectivity &amp; exit-IP monitor for Android by ShuttleLab.
+  </p>
+  <p>
+    🌐 <a href="https://netpulse.shuttlelab.org">netpulse.shuttlelab.org</a>
+    &nbsp;·&nbsp;
+    📱 Android app source: <a href="https://github.com/ShuttleLab/NetPulse">ShuttleLab/NetPulse</a>
+  </p>
+  <p>
+    <img src="public/screenshots/1.png" alt="NetPulse app screenshot" width="320" />
+  </p>
+</div>
 
-Marketing and download landing page for **NetPulse**, a lightweight connectivity & exit-IP monitor for Android by ShuttleLab. The Android app itself lives at [ShuttleLab/NetPulse](https://github.com/ShuttleLab/NetPulse); this repo is just the website at [netpulse.shuttlelab.org](https://netpulse.shuttlelab.org). Bilingual (English / 中文), static, runs anywhere.
+> **This repo is just the website.** The NetPulse Android app (Kotlin) lives at **[ShuttleLab/NetPulse](https://github.com/ShuttleLab/NetPulse)**. Bilingual (English / 中文), static export, runs anywhere.
 
 ## Features
 
