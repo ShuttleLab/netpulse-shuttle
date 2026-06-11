@@ -111,7 +111,7 @@ export default async function HomePage({ params }: Props) {
             <p className="mt-3 text-xs text-muted-foreground">{t("requiresAndroid")}</p>
             {!PLAY_AVAILABLE && <p className="mt-1 text-xs text-muted-foreground/70">{t("playComingSoon")}</p>}
           </div>
-          <PhoneFrame src="/screenshots/1.png" label={t("screenshotPlaceholder")} className="mx-auto w-[280px] max-w-full" />
+          <PhoneFrame src="/screenshots/1.png" label={t("screenshotPlaceholder")} className="mx-auto w-[300px] sm:w-[360px] lg:w-[440px] max-w-full" />
         </div>
       </section>
 
@@ -146,12 +146,12 @@ export default async function HomePage({ params }: Props) {
 
       {/* Screenshots */}
       <section className="py-14 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-10 text-center text-2xl font-bold sm:text-3xl">{t("screenshotsHeading")}</h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            <PhoneFrame src="/screenshots/1.png" label={`${t("screenshotPlaceholder")} 1`} className="mx-auto w-full max-w-[340px]" />
-            <PhoneFrame src="/screenshots/2.png" label={`${t("screenshotPlaceholder")} 2`} className="mx-auto w-full max-w-[340px]" />
-            <PhoneFrame src="/screenshots/3.png" label={`${t("screenshotPlaceholder")} 3`} className="mx-auto w-full max-w-[340px]" />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <PhoneFrame src="/screenshots/1.png" label={`${t("screenshotPlaceholder")} 1`} className="mx-auto w-full max-w-[420px]" />
+            <PhoneFrame src="/screenshots/2.png" label={`${t("screenshotPlaceholder")} 2`} className="mx-auto w-full max-w-[420px]" />
+            <PhoneFrame src="/screenshots/3.png" label={`${t("screenshotPlaceholder")} 3`} className="mx-auto w-full max-w-[420px]" />
           </div>
         </div>
       </section>
