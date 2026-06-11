@@ -5,6 +5,7 @@ import {
   Wifi, Globe, Bell, ListChecks, BellRing, Languages,
   Download, ShieldCheck, Smartphone,
 } from "lucide-react";
+import { SeoFaq, FAQS } from "@/components/seo-faq";
 
 const GithubMark = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -22,9 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   const baseUrl = "https://netpulse.shuttlelab.org";
+  const keywords =
+    locale === "zh"
+      ? ["NetPulse", "网络连通性监控", "断网提醒", "掉线提醒", "出口 IP 监控", "IP 变化提醒", "VPN 连接监控", "检测 VPN 掉线", "IP 泄漏检测", "强制门户检测", "安卓网络监控 app", "开源", "免费"]
+      : ["NetPulse", "internet connectivity monitor", "exit IP monitor", "connection drop alert", "disconnect alert Android", "VPN connection monitor", "detect VPN drop", "IP leak detection", "captive portal detection", "network monitor app Android", "open source", "free"];
   return {
     title: t("title"),
     description: t("subtitle"),
+    keywords,
     alternates: {
       canonical: locale === "en" ? `${baseUrl}/` : `${baseUrl}/${locale}/`,
       languages: { en: `${baseUrl}/`, zh: `${baseUrl}/zh/`, "x-default": `${baseUrl}/` },
@@ -79,8 +85,27 @@ export default async function HomePage({ params }: Props) {
     { n: 4, title: t("s4Title"), desc: t("s4Desc") },
   ];
 
+  // GEO/SEO structured data, in the current locale so visible text == schema text.
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: locale === "zh" ? f.q.zh : f.q.en,
+      acceptedAnswer: { "@type": "Answer", text: locale === "zh" ? f.a.zh : f.a.en },
+    })),
+  };
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: locale === "zh" ? "如何用 NetPulse 监控网络连接" : "How to monitor your connection with NetPulse",
+    step: steps.map((s) => ({ "@type": "HowToStep", position: s.n, name: s.title, text: s.desc })),
+  };
+
   return (
     <div className="w-full">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-primary/[0.06] to-transparent">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24 lg:px-8">
@@ -181,6 +206,9 @@ export default async function HomePage({ params }: Props) {
           <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("trustDesc")}</p>
         </div>
       </section>
+
+      {/* Use cases + comparison + FAQ (SEO / GEO) */}
+      <SeoFaq locale={locale} />
 
       {/* Final CTA */}
       <section className="bg-primary/[0.05] py-16">
