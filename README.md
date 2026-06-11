@@ -10,7 +10,7 @@
     📱 Android app source: <a href="https://github.com/ShuttleLab/NetPulse">ShuttleLab/NetPulse</a>
   </p>
   <p>
-    <img src="public/screenshots/1.png" alt="NetPulse app screenshot" width="320" />
+    <img src="public/screenshots/1.png" alt="NetPulse app screenshot" width="500" />
   </p>
 </div>
 
