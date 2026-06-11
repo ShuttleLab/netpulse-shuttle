@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const paths = [
     { path: "", priority: 1.0, changeFrequency: "weekly" as const },
+    { path: "/vpn-connection-monitor", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/privacy", priority: 0.4, changeFrequency: "yearly" as const },
     { path: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
   ];

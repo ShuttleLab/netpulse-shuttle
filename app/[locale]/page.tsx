@@ -147,6 +147,10 @@ export default async function HomePage({ params }: Props) {
           <div>
             <h2 className="font-semibold">{t("notVpnTitle")}</h2>
             <p className="mt-1 text-[15px] text-muted-foreground leading-relaxed">{t("notVpnDesc")}</p>
+            <a href={locale === "en" ? "/vpn-connection-monitor/" : `/${locale}/vpn-connection-monitor/`}
+               className="mt-2 inline-block text-sm font-medium text-primary hover:underline">
+              {locale === "zh" ? "用 NetPulse 监控 VPN 是否掉线 →" : "Monitor whether your VPN dropped with NetPulse →"}
+            </a>
           </div>
         </div>
       </section>
