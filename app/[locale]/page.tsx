@@ -36,12 +36,13 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-/** Placeholder phone frame — replace the inner area with a real screenshot later. */
-function PhoneFrame({ src, label }: { src?: string; label: string }) {
+/** Phone frame holding a real screenshot. `className` overrides the wrapper width.
+ *  Aspect 5/11 matches the 1080×2376 screenshots, so bg-cover fills without cropping. */
+function PhoneFrame({ src, label, className }: { src?: string; label: string; className?: string }) {
   return (
-    <div className="mx-auto w-[230px] max-w-full rounded-[2rem] border-[6px] border-foreground/85 bg-foreground/85 shadow-xl">
+    <div className={`${className ?? "mx-auto w-[240px] max-w-full"} rounded-[2rem] border-[6px] border-foreground/85 bg-foreground/85 shadow-xl`}>
       <div
-        className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.5rem] bg-muted bg-cover bg-center"
+        className="relative aspect-[5/11] w-full overflow-hidden rounded-[1.5rem] bg-muted bg-cover bg-center"
         style={src ? { backgroundImage: `url(${src})` } : undefined}
       >
         <div className="absolute left-1/2 top-0 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-foreground/85" />
@@ -110,7 +111,7 @@ export default async function HomePage({ params }: Props) {
             <p className="mt-3 text-xs text-muted-foreground">{t("requiresAndroid")}</p>
             {!PLAY_AVAILABLE && <p className="mt-1 text-xs text-muted-foreground/70">{t("playComingSoon")}</p>}
           </div>
-          <PhoneFrame src="/screenshots/1.png" label={t("screenshotPlaceholder")} />
+          <PhoneFrame src="/screenshots/1.png" label={t("screenshotPlaceholder")} className="mx-auto w-[280px] max-w-full" />
         </div>
       </section>
 
@@ -148,9 +149,9 @@ export default async function HomePage({ params }: Props) {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-10 text-center text-2xl font-bold sm:text-3xl">{t("screenshotsHeading")}</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            <PhoneFrame src="/screenshots/1.png" label={`${t("screenshotPlaceholder")} 1`} />
-            <PhoneFrame src="/screenshots/2.png" label={`${t("screenshotPlaceholder")} 2`} />
-            <PhoneFrame src="/screenshots/3.png" label={`${t("screenshotPlaceholder")} 3`} />
+            <PhoneFrame src="/screenshots/1.png" label={`${t("screenshotPlaceholder")} 1`} className="mx-auto w-full max-w-[340px]" />
+            <PhoneFrame src="/screenshots/2.png" label={`${t("screenshotPlaceholder")} 2`} className="mx-auto w-full max-w-[340px]" />
+            <PhoneFrame src="/screenshots/3.png" label={`${t("screenshotPlaceholder")} 3`} className="mx-auto w-full max-w-[340px]" />
           </div>
         </div>
       </section>
