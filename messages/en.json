@@ -33,7 +33,7 @@
     "f3Title": "Persistent status-bar icon",
     "f3Desc": "Distinct check / cross / ring glyphs keep the connection state readable even in the monochrome status bar.",
     "f4Title": "Rolling check log",
-    "f4Desc": "Keeps the last N results with timestamp, outcome, latency and exit IP — and highlights the exact moment the IP changed.",
+    "f4Desc": "Keeps the last N checks with timestamp, outcome, latency and exit IP — now with a latency trend chart on top and colour-coded latency (yellow >500ms, red >1000ms), highlighting the exact moment the IP changed.",
     "f5Title": "Disconnect alerts",
     "f5Desc": "Optional vibration and sound the moment connectivity drops, plus one-tap start/stop and a next-check countdown.",
     "f6Title": "Bilingual & auto-restart",

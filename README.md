@@ -6,7 +6,7 @@ Marketing and download landing page for **NetPulse**, a lightweight connectivity
 
 - **Landing page** — hero, feature overview, screenshots, how-it-works, and a download call-to-action.
 - **Download** — links to the latest APK on GitHub Releases (a Google Play badge is reserved for later via a flag in `app/[locale]/page.tsx`).
-- **Privacy policy** — discloses exactly what the app does, the permissions it uses, and the one external service it contacts (`ip9.com.cn` for exit-IP geolocation).
+- **Privacy policy** — discloses exactly what the app does, the permissions it uses, and the external IP-geolocation services it contacts (`ip.im` in English, `ip9.com.cn` in Chinese).
 - **Bilingual** — English and Chinese via URL-based i18n (next-intl).
 - **Themeable** — ShuttleLab purple palette with light/dark/system appearance.
 
