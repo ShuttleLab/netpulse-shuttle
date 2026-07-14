@@ -5,7 +5,7 @@
     a lightweight connectivity &amp; exit-IP monitor for Android by ShuttleLab.
   </p>
   <p>
-    🌐 <a href="https://netpulse.shuttlelab.org">netpulse.shuttlelab.org</a>
+    🌐 <a href="https://netpulse.shuttlelab.org">NetPulse — Android VPN drop &amp; connection monitor</a>
     &nbsp;·&nbsp;
     📱 Android app source: <a href="https://github.com/ShuttleLab/NetPulse">ShuttleLab/NetPulse</a>
   </p>
