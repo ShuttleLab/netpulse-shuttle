@@ -27,7 +27,7 @@ const structuredData = {
   operatingSystem: "Android 8.0+",
   description: "Free, open-source Android app that monitors internet connectivity and your exit IP, and alerts you the moment the connection drops. Not a VPN — it only observes; useful for watching whether a VPN or proxy connection is still up.",
   url: "https://netpulse.shuttlelab.org",
-  downloadUrl: "https://github.com/ShuttleLab/NetPulse/releases/latest",
+  downloadUrl: "https://github.com/ShuttleLab/NetPulse/releases/latest/download/NetPulse.apk",
   softwareHelp: "https://netpulse.shuttlelab.org/",
   screenshot: [
     "https://netpulse.shuttlelab.org/screenshots/1.png",

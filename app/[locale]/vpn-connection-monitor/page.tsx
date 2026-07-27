@@ -12,7 +12,7 @@ import { Download, ArrowLeft } from "lucide-react";
 
 const BASE = "https://netpulse.shuttlelab.org";
 const SLUG = "vpn-connection-monitor";
-const DOWNLOAD_URL = "https://github.com/ShuttleLab/NetPulse/releases/latest";
+const DOWNLOAD_URL = "https://github.com/ShuttleLab/NetPulse/releases/latest/download/NetPulse.apk";
 const SOURCE_URL = "https://github.com/ShuttleLab/NetPulse";
 const PUBLISHED = "2026-06-10";
 
